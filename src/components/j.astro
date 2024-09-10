@@ -1,0 +1,50 @@
+---
+import Swiper from 'swiper';
+    import 'swiper/swiper-bundle.min.css';
+    
+    let swiperInstance;
+    
+    onMount(() => {
+      swiperInstance = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20, // Adjust this value for your desired gap between logos
+        centeredSlides: true,
+      });
+    });
+    
+    onCleanup(() => {
+      if (swiperInstance) {
+        swiperInstance.destroy();
+      }
+    });
+
+function onMount(arg0: () => void) {
+throw new Error('Function not implemented.');
+}
+
+function onCleanup(arg0: () => void) {
+throw new Error('Function not implemented.');
+}
+---
+    
+    
+    
+    <style>
+    .swiper-container {
+      padding: 20px; /* Adjust this value for your desired padding */
+    }
+    </style>
+    
+    <template>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Replace these with your actual logo components -->
+        <div class="swiper-slide"><img src="/path-to-your-logo1.png" alt="Logo 1" /></div>
+        <div class="swiper-slide"><img src="/path-to-your-logo2.png" alt="Logo 2" /></div>
+        <div class="swiper-slide"><img src="/path-to-your-logo3.png" alt="Logo 3" /></div>
+        <!-- Add more logo slides as needed -->
+      </div>
+    </div>
+    </template>
+    
